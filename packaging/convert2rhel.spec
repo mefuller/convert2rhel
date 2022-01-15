@@ -9,12 +9,12 @@
 %endif
 
 Name:           convert2rhel
-Version:        0.25
+Version:        0.26
 Release:        1%{?dist}
 Summary:        Automates the conversion of RHEL derivative distributions to RHEL
 
 License:        GPLv3+
-URL:            https://github.com/oamg/convert2rhel
+URL:            https://github.com/mefuller/convert2rhel
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 
@@ -110,6 +110,9 @@ install -p man/%{name}.8 %{buildroot}%{_mandir}/man8/
 %attr(0644,root,root) %{_mandir}/man8/%{name}.8*
 
 %changelog
+* Sat Jan 15 2022 Mark E. Fuller <mark.e.fuller@gmx.de> - 0.26-1
+- Add Rocky Linux support
+
 * Mon Dec 13 2021 Eric Gustavsson <egustavs@redhat.com> 0.25-1
 - Fix python3-cloud-what package issue
 - Fix yum distro-sync returning non-zero value for no change
